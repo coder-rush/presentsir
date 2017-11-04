@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity"
+    android:id="@+id/R1"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login/Registration "
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="83dp"
+        android:elegantTextHeight="false"
+        android:textColorHighlight="#ff81ff18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/textView3"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColorHint="#ffb9ff2b" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtusername"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/btnRegister"
+        android:layout_alignEnd="@+id/btnRegister"
+        android:text="1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txtteacherpass"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/txtusername"
+        android:layout_alignStart="@+id/txtusername"
+        android:text="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/btnlogin"
+        android:onClick="loginAction"
+        android:layout_above="@+id/btnRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No account yet? Create Here."
+        android:id="@+id/btnRegister"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:onClick="onRegisterClickAction"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:orientation="horizontal"
+        android:divider="@android:color/holo_blue_light"
+        android:showDividers="middle"
+
+        android:layout_above="@+id/btnlogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+
+
+    <RadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Teacher Login"
+    android:id="@+id/chkteacher"
+    android:checked="false"
+        android:textAlignment="center"
+        android:layout_above="@+id/btnlogin"
+        android:layout_alignRight="@+id/txtteacherpass"
+        android:layout_alignEnd="@+id/txtteacherpass"
+        android:layout_marginBottom="38dp"
+        android:layout_weight="1"/>
+
+    <RadioButton
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Login"
+        android:id="@+id/chkstudent"
+        android:checked="false"
+        android:layout_alignTop="@+id/chkteacher"
+        android:layout_toLeftOf="@+id/btnlogin"
+        android:layout_toStartOf="@+id/btnlogin" />
+    </RadioGroup>
+
+</RelativeLayout>
