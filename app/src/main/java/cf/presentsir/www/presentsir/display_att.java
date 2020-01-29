@@ -30,7 +30,8 @@ public class display_att extends ActionBarActivity {
 
 
 
-
+        // Adding comments 
+        // github test
 
         setContentView(R.layout.activity_display_att);
     }
